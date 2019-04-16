@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2"> 
+  <plugin-info> 
+    <description>${project.description}</description>  
+    <version>${project.version}</version>  
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>  
+    <param name="plugin-icon">images/pluginIcon.png</param>  
+    <param name="plugin-logo">images/pluginLogo.png</param> 
+  </plugin-info>  
+  <!-- add our i18n resource -->  
+  <resource type="i18n" name="i18n" location="balancedParentheses"/>  
+  <!-- add our web resources -->  
+  <web-resource key="balancedParentheses-resources" name="balancedParentheses Web Resources"> 
+    <dependency>com.atlassian.auiplugin:ajs</dependency>  
+    <resource type="download" name="balancedParentheses.css" location="/css/balancedParentheses.css"/>  
+    <resource type="download" name="balancedParentheses.js" location="/js/balancedParentheses.js"/>  
+    <resource type="download" name="images/" location="/images"/>  
+    <context>balancedParentheses</context> 
+  </web-resource>  
+  <customfield-type name="Brackets Custom Field" i18n-name-key="brackets-custom-field.name" key="brackets-custom-field" class="com.thebadpanda.balancedparentheses.customfields.CustomField"> 
+    <description key="brackets-custom-field.description">The Brackets Custom Field Plugin</description>  
+    <resource name="view" type="velocity" location="/templates/customfields/brackets-custom-field/view.vm"/>  
+    <resource name="edit" type="velocity" location="/templates/customfields/brackets-custom-field/edit.vm"/> 
+  </customfield-type>
+</atlassian-plugin>
