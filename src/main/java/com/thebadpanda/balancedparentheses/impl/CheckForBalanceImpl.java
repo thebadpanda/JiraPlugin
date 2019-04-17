@@ -1,4 +1,6 @@
-package com.thebadpanda.balancedparentheses.jira.customfields;
+package com.thebadpanda.balancedparentheses.impl;
+
+import com.thebadpanda.balancedparentheses.api.CheckForBalance;
 
 import java.util.Stack;
 

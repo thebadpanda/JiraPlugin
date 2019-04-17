@@ -1,6 +1,5 @@
 package com.thebadpanda.balancedparentheses.api;
 
-public interface MyPluginComponent
-{
+public interface MyPluginComponent {
     String getName();
 }

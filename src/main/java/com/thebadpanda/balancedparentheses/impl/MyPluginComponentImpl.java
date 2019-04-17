@@ -27,28 +27,4 @@ public class MyPluginComponentImpl implements MyPluginComponent {
 
         return "myComponent";
     }
-
-//    @Override
-//    public String checkBalanced(String input) {
-//        long countLeft;
-//        long countRight;
-//
-//        System.out.println("enter string: ");
-//
-//        Scanner sc = new Scanner(System.in);
-//        String res = sc.hasNext() ? sc.next() : "";
-//
-//        countLeft = res.codePoints()
-//                .mapToObj(c -> String.valueOf((char) c))
-//                .filter(s -> s.equals("(")).count();
-//        countRight = res.codePoints()
-//                .mapToObj(c -> String.valueOf((char) c))
-//                .filter(s -> s.equals(")")).count();
-//
-//        if (countLeft == countRight) {
-//            return input;
-//        } else {
-//            return "Brackets are not balanced!";
-//        }
-//    }
 }

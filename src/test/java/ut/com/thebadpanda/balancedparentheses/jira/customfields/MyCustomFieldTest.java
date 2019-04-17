@@ -1,34 +1,41 @@
 package ut.com.thebadpanda.balancedparentheses.jira.customfields;
 
+import com.thebadpanda.balancedparentheses.api.CheckForBalance;
+import com.thebadpanda.balancedparentheses.impl.CheckForBalanceImpl;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import com.thebadpanda.balancedparentheses.jira.customfields.MyCustomField;
+import org.mockito.MockitoAnnotations;
 
-import static org.mockito.Mockito.*;
+import static org.junit.Assert.*;
 
-/**
- * @since 3.5
- */
+
 public class MyCustomFieldTest {
+
+    private CheckForBalance checkForBalance;
+
+    private final String notBalancedBrackets = ")(hallo((freunde))";
+    private final String balancedBrackets = "(wie)((gehts dir))";
 
     @Before
     public void setup() {
+        MockitoAnnotations.initMocks(this);
+        checkForBalance = new CheckForBalanceImpl();
+    }
 
+    @Test
+    public void whenBracketsNotBalanced_thenExceptionShouldBeThrown() {
+        assertFalse(checkForBalance.isBracketsBalanced(notBalancedBrackets));
+    }
+
+    @Test
+    public void whenBracketsAreBalanced_thenReturnStringValue() {
+        assertTrue(checkForBalance.isBracketsBalanced(balancedBrackets));
     }
 
     @After
     public void tearDown() {
-
+        checkForBalance = null;
+        assertNull(checkForBalance);
     }
-
-    @Test(expected=Exception.class)
-    public void testSomething() throws Exception {
-
-        //MyCustomField testClass = new MyCustomField();
-
-        throw new Exception("MyCustomField has no tests!");
-
-    }
-
 }

@@ -1,6 +1,7 @@
-package com.thebadpanda.balancedparentheses.jira.customfields;
+package com.thebadpanda.balancedparentheses.api;
 
 public interface CheckForBalance {
 
     boolean isBracketsBalanced(String string);
+
 }
