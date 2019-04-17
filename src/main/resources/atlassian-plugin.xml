@@ -17,10 +17,10 @@
     <resource type="download" name="balancedParentheses.js" location="/js/balancedParentheses.js"/>  
     <resource type="download" name="images/" location="/images"/>  
     <context>balancedParentheses</context> 
-  </web-resource>  
-  <customfield-type name="Brackets Custom Field" i18n-name-key="brackets-custom-field.name" key="brackets-custom-field" class="com.thebadpanda.balancedparentheses.customfields.CustomField"> 
-    <description key="brackets-custom-field.description">The Brackets Custom Field Plugin</description>  
-    <resource name="view" type="velocity" location="/templates/customfields/brackets-custom-field/view.vm"/>  
-    <resource name="edit" type="velocity" location="/templates/customfields/brackets-custom-field/edit.vm"/> 
+  </web-resource>
+  <customfield-type name="My Custom Field" i18n-name-key="my-custom-field.name" key="my-custom-field" class="com.thebadpanda.balancedparentheses.jira.customfields.MyCustomField"> 
+    <description key="my-custom-field.description">The My Custom Field Plugin</description>
+    <resource name="view" type="velocity" location="templates/plugins/fields/view/view-basictext.vm"/>
+    <resource name="edit" type="velocity" location="/templates/customfields/my-custom-field/edit.vm"/>
   </customfield-type>
 </atlassian-plugin>

@@ -74,14 +74,8 @@
         <dependency>
             <groupId>com.atlassian.sal</groupId>
             <artifactId>sal-api</artifactId>
-            <version>2.0.17</version>
-            <scope>provided</scope>
-            <!-- Uses the application's SAL instead of bundling it into the plugin. -->
-        </dependency>
-        <dependency>
-            <groupId>com.atlassian.sal</groupId>
-            <artifactId>sal-api</artifactId>
             <version>3.2.0-abbce37</version>
+            <scope>provided</scope>
         </dependency>
         <!-- Uncomment to use TestKit in your project. Details at https://bitbucket.org/atlassian/jira-testkit -->
         <!-- You can read more about TestKit at https://developer.atlassian.com/display/JIRADEV/Plugin+Tutorial+-+Smarter+integration+testing+with+TestKit -->
